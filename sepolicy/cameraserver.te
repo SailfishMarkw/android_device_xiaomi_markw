@@ -1,2 +1,3 @@
-allow cameraserver media_settings_xml_prop:file { getattr read open };
+# TODO: next line makes build fail for some reason
+# allow cameraserver media_settings_xml_prop:file { getattr read open };
 allow cameraserver mm-qcamerad:dir getattr;
