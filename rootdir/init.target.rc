@@ -146,8 +146,8 @@ service imsdatadaemon /system/bin/imsdatadaemon
     writepid /dev/cpuset/system-background/tasks
     disabled
 
-on property:sys.ims.QMI_DAEMON_STATUS=1
-    start imsdatadaemon
+#on property:sys.ims.QMI_DAEMON_STATUS=1
+#    start imsdatadaemon
 
 service ims_rtp_daemon /system/bin/ims_rtp_daemon
    class main
@@ -165,7 +165,7 @@ service imscmservice /system/bin/imscmservice
    disabled
 
 on property:sys.ims.DATA_DAEMON_STATUS=1
-    start ims_rtp_daemon
+    #start ims_rtp_daemon
     start imscmservice
 
 service ppd /system/vendor/bin/mm-pp-dpps
